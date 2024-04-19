@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7UOGG/qoecEqmXlEvKs8BZ8DPjFuc+uhmhJAbaUQJJdmrhdYtYSvayouzvWtUW6Xqc0MOwkx68olVdvDNdeSXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PeamSuwattanakorn\\source\\repos\\peam-suwattanakorn\\web_app\\web_app\\web_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PeamSuwattanakorn\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.3\\microsoft.netcore.app.host.linux-x64.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

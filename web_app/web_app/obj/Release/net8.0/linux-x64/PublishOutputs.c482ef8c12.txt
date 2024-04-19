@@ -1,0 +1,7 @@
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\web_app
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\web_app.dll
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\web_app.deps.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\web_app.runtimeconfig.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Release\net8.0\linux-x64\PubTmp\Out\web_app.pdb
