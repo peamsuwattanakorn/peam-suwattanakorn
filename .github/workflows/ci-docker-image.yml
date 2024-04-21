@@ -1,0 +1,42 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build the Docker image
+        run: docker compose build
+
+      - name: Login to Azure Container Registry
+        uses: azure/docker-login@v1
+        with:
+          login-server: dockerwebapp21.azurecr.io
+          username: ${{ secrets.CR_USERNAME }}
+          password: ${{ secrets.CR_PASSWORD }}
+
+      - name: Tag and Push Docker image to Azure Container Registry
+        run: |
+          docker tag webapp dockerwebapp21.azurecr.io/webapp:latest
+          docker push dockerwebapp21.azurecr.io/webapp:latest
+        env:
+          DOCKER_BUILDKIT: 1  # Enable BuildKit for advanced build features
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          publish-profile: ${{ secrets.PUBLISH_PROFILE }}
+          app-name: wa-contentintegration-dev-test
+          images: dockerwebapp21.azurecr.io/webapp:latest
+          multi-container-config-type: "compose"
+          # If you have a specific docker-compose file, provide the path
+          multi-container-config-file: "docker-compose.yml"
+        env:
+          AZURE_WEBAPP_CONTAINER_WORKER_TYPE: "compose"
