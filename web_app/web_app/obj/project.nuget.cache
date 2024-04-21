@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "S6aJ/yhiPM9HchV5F1Yv89qLW40967Vd8d8mUlP8Dv2cfZfXSvSpIYhaJRcR5HRvjBp37bQYwivM1UIBesIoCg==",
+  "dgSpecHash": "5eXOAvRK2Q7SBGlQbO00dr3ftuLta8BtG2e1Ngr1LMskiierw6b/RfW5ycqRSWb0wdsgsEBlAjC7RdkVbAHjxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\PeamSuwattanakorn\\source\\repos\\peam-suwattanakorn\\web_app\\web_app\\web_app.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\PeamSuwattanakorn\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
+  ],
   "logs": []
 }

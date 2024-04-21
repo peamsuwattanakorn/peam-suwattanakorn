@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\web_app"
+    "\\web_app",
+    "\\web_app\\web_app"
   ],
-  "SelectedNode": "\\web_app\\web_app.sln",
+  "SelectedNode": "\\web_app\\web_app\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }
