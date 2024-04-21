@@ -41,10 +41,9 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-          app-name: wa-contentintegration-dev-test
+          app-name: wa-webapp20240419220123-test
           images: dockerwebapp21.azurecr.io/webapp:latest
           multi-container-config-type: "compose"
           # If you have a specific docker-compose file, provide the path
-          multi-container-config-file: "docker-compose.yml"
         env:
           AZURE_WEBAPP_CONTAINER_WORKER_TYPE: "compose"
