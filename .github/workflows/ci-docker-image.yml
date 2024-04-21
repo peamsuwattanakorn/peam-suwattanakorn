@@ -12,21 +12,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: build the docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          dockerfile: Dockerfile
-          push: false
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/webapp:latest
-
+      
       - name: Login to Azure Container Registry
         uses: azure/docker-login@v1
         with:
           login-server: dockerwebapp21.azurecr.io
           username: ${{ secrets.CR_USERNAME }}
           password: ${{ secrets.CR_PASSWORD }}
+          
+      - name: Build the Docker image
+        run: docker build Dockerfile
+
+      
 
       - name: Tag and Push Docker image to Azure Container Registry
         run: |
