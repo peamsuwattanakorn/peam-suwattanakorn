@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: ./web_app/web_app/Dockerfile
+          dockerfile: ./web_app/web_app/web_app/Dockerfile
           push: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
       
