@@ -21,9 +21,7 @@ jobs:
           password: ${{ secrets.CR_PASSWORD }}
           
       - name: Build the Docker image
-        run: docker build Dockerfile
-
-      
+        run: docker build .
 
       - name: Tag and Push Docker image to Azure Container Registry
         run: |
