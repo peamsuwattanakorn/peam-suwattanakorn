@@ -15,12 +15,17 @@ jobs:
 
       - name: Docker Setup Buildx
         uses: docker/setup-buildx-action@v3.3.0
+
+      - name: run pwd
+        run: pwd
+
+      - name: run ls
+        run: ls
   
       - name: build the docker image
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: ./web_app/web_app/Dockerfile
           push: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
       
@@ -41,10 +46,9 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-          app-name: wa-contentintegration-dev-test
+          app-name: wa-webapp20240419220123-test
           images: dockerwebapp21.azurecr.io/webapp:latest
           multi-container-config-type: "compose"
           # If you have a specific docker-compose file, provide the path
-          multi-container-config-file: "docker-compose.yml"
         env:
           AZURE_WEBAPP_CONTAINER_WORKER_TYPE: "compose"

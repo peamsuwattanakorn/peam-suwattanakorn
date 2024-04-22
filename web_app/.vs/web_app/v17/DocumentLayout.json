@@ -24,7 +24,7 @@
         },
         {
           "DockedWidth": 889,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,10 +35,6 @@
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Dockerfile",
@@ -46,7 +42,7 @@
               "RelativeDocumentMoniker": "web_app\\Dockerfile",
               "ToolTip": "C:\\Users\\PeamSuwattanakorn\\source\\repos\\peam-suwattanakorn\\web_app\\web_app\\Dockerfile",
               "RelativeToolTip": "web_app\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-20T13:59:27.188Z",
               "EditorCaption": ""
