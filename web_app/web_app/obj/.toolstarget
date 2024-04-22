@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <DockerfileFile>C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\Dockerfile</DockerfileFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ToolsTarget Include="ContainerBuild" />
+  </ItemGroup>
+</Project>
