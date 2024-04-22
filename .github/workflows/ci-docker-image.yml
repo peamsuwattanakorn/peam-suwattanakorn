@@ -22,13 +22,17 @@ jobs:
       - name: run ls
         run: ls
   
-      - name: build the docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          dockerfile: Dockerfile
-          push: false
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
+      # - name: build the docker image
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: .
+      #     dockerfile: Dockerfile
+      #     push: false
+      #     tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
+
+      - name: Build image
+        run: |
+          docker build --tag=${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest -f Dockerfile .
       
       - name: Login to Azure Container Registry
         uses: azure/docker-login@v1
