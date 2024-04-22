@@ -63,32 +63,49 @@ jobs:
       #     # If you have a specific docker-compose file, provide the path
       #   env:
       #     AZURE_WEBAPP_CONTAINER_WORKER_TYPE: "compose"
-  deploy:
-      runs-on: ubuntu-latest
-      needs: build
-      environment:
-        name: 'Production'
-        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-      permissions:
-        id-token: write #This is required for requesting the JWT
+  # deploy:
+  #     runs-on: ubuntu-latest
+  #     needs: build
+  #     environment:
+  #       name: 'Production'
+  #       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+  #     permissions:
+  #       id-token: write #This is required for requesting the JWT
   
-      steps:
-        # - name: Download artifact from build job
-        #   uses: actions/download-artifact@v3
-        #   with:
-        #     name: .net-app
+  #     steps:
+  #       # - name: Download artifact from build job
+  #       #   uses: actions/download-artifact@v3
+  #       #   with:
+  #       #     name: .net-app
         
-        - name: Login to Azure
-          uses: azure/login@v1
-          with:
-            client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6035052AD1614DCE93B98F2483BF7149 }}
-            tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0CAD580B770344A0907515EF87626DD7 }}
-            subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AEE3CAB3D95640369BE419CE6DD5B47C }}
+  #       - name: Login to Azure
+  #         uses: azure/login@v1
+  #         with:
+  #           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6035052AD1614DCE93B98F2483BF7149 }}
+  #           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0CAD580B770344A0907515EF87626DD7 }}
+  #           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AEE3CAB3D95640369BE419CE6DD5B47C }}
   
-        - name: Deploy to Azure Web App
-          id: deploy-to-webapp
-          uses: azure/webapps-deploy@v2
-          with:
-            app-name: 'webapp20240419220123'
-            slot-name: 'Production'
-            package: .
+  #       - name: Deploy to Azure Web App
+  #         id: deploy-to-webapp
+  #         uses: azure/webapps-deploy@v2
+  #         with:
+  #           app-name: 'webapp20240419220123'
+  #           slot-name: 'Production'
+  #           package: .
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'webapp20240422222307'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_c76d681ea5fd44938e854e706304804d }}
+          images: 'webapp20240422222529.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_69dd4d92e1d44441acae1955372e62c4 }}/webapp:${{ github.sha }}'
