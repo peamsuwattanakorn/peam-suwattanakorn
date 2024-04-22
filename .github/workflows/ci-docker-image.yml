@@ -35,7 +35,7 @@ jobs:
       - name: Login to Azure Container Registry
         uses: azure/docker-login@v1
         with:
-          login-server: dockerwebapp21.azurecr.io
+          login-server: ${{ secrets.CR_AZURE_CONTAINER }}
           username: ${{ secrets.CR_USERNAME }}
           password: ${{ secrets.CR_PASSWORD }}
 
@@ -43,14 +43,14 @@ jobs:
       #   run: |
       #     docker image ls
       #     docker tag webapp dockerwebapp21.azurecr.io/webapp:latest
-      #     docker push dockerwebapp21.azurecr.io/webapp:latest
+      #     docker push ${{ secrets.CR_AZURE_CONTAINER }}/webapp:latest
       - name: Tag and Push Docker image to Azure Container Registry
         uses: docker/build-push-action@v4
         with:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: dockerwebapp21.azurecr.io/rest-api:latest
+          tags: ${{ secrets.CR_AZURE_CONTAINER }}/webapp:latest
         env:
           DOCKER_BUILDKIT: 1  # Enable BuildKit for advanced build features
       # - name: Deploy to Azure Web App
