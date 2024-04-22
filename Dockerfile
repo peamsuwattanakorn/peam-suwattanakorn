@@ -14,11 +14,11 @@ COPY ["web_app/web_app/web_app.csproj", "web_app/"]
 RUN dotnet restore "./web_app/web_app.csproj"
 COPY . .
 WORKDIR "/src/web_app"
-RUN dotnet build ".//web_appweb_app.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./web_app/web_app.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish ".//web_appweb_app.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./web_app/web_app.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
