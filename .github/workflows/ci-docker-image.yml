@@ -39,8 +39,8 @@ jobs:
 
       - name: Tag and Push Docker image to Azure Container Registry
         run: |
-          docker images
-          docker tag webapp dockerwebapp21.azurecr.io/webapp:latest
+          # docker images
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/webapp dockerwebapp21.azurecr.io/webapp:latest
           docker push dockerwebapp21.azurecr.io/webapp:latest
         env:
           DOCKER_BUILDKIT: 1  # Enable BuildKit for advanced build features
