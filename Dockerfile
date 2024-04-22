@@ -11,7 +11,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 RUN echo $(pwd)
 RUN echo $(ls)
-COPY ["web_app/web_app.csproj", "web_app/"]
+COPY ["web_app.csproj", "web_app/"]
 RUN dotnet restore "./web_app/web_app.csproj"
 COPY . .
 WORKDIR "/src/web_app"
