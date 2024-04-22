@@ -15,6 +15,9 @@ jobs:
 
       - name: Docker Setup Buildx
         uses: docker/setup-buildx-action@v3.3.0
+
+      - name: run pwd
+        run: pwd
   
       - name: build the docker image
         uses: docker/build-push-action@v4
