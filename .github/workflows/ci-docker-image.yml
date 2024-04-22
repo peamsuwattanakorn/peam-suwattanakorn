@@ -25,8 +25,7 @@ jobs:
       - name: build the docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./web_app/web_app
-          dockerfile: Dockerfile
+          context: .
           push: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
       
