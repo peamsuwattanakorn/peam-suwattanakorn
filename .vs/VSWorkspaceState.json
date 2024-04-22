@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\web_app",
-    "\\web_app\\web_app"
+    "\\web_app\\web_app",
+    "\\web_app\\web_app\\Controllers"
   ],
-  "SelectedNode": "\\web_app\\web_app\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }

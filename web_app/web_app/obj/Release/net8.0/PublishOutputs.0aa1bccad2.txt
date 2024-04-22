@@ -1,0 +1,7 @@
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\web_app.exe
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\appsettings.Development.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\appsettings.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\web_app.dll
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\web_app.deps.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\web_app.runtimeconfig.json
+C:\Users\PeamSuwattanakorn\source\repos\peam-suwattanakorn\web_app\web_app\obj\Docker\publish\web_app.pdb
